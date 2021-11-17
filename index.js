@@ -1,32 +1,43 @@
-// const http = require('http')
+let Contenedor=require('./manejadorDocumentos')
+let express = require('express')
 
-// const server = http.createServer((peticion, respuesta) => {
-// 	respuesta.end('Hola mundo')
-// })
+let misProductos = new Contenedor('./productos.txt')
 
-// const connectedServer = server.listen(8080, () => {
-// 	console.log(`Servidor Http escuchando en el puerto ${connectedServer.address().port}`)
-//      })
-     
-const express = require('express')
+function getRandom(min, max) {
+   return Math.floor(Math.random() * (max - min)) + min;
+ }
 
-const app = express()
+
+let app = express()
 
 const PORT = 8080
 
-const server = app.listen(PORT, () => {
+app.get('/', (req, res) => {
+	res.send({ mensaje: 'hola universo' })
+     })
+
+app.get('/productos', async (req, res) => {
+   let resultado=await misProductos.getAll();
+   res.json(resultado)
+})
+
+app.get('/productoRandom', async (req, res) => {
+   let total= await misProductos.getAll();
+   let randomNum=getRandom(0,total.length);
+   let resultado= total[randomNum]
+   res.json(resultado)
+})
+
+
+
+app.listen(PORT, () => {
+   console.log(`Servidor http escuchando en http://localhost:${PORT}`)
+})
+
+
+
+/* const server = app.listen(PORT, () => {
    console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
 })
-server.on("error", error => console.log(`Error en servidor ${error}`))
 
-app.get('/', (req, res) => {
-	res.send({ mensaje: 'hola mundo' })
-     })
-
-app.get('/productos', (req, res) => {
-	res.send({ mensaje: 'hola mundo' })
-     })
-
-app.get('/productoRandom', (req, res) => {
-   res.send({ mensaje: 'hola mundo' })
-})
+server.on("error", error => console.log(`Error en servidor ${error}`)) */
