@@ -1,5 +1,9 @@
 let Contenedor=require('./manejadorDocumentos')
 let express = require('express')
+let app = express()
+const PORT = 8088
+const { Router } = express
+const router = Router()
 
 let misProductos = new Contenedor('./productos.txt')
 
@@ -8,9 +12,8 @@ function getRandom(min, max) {
  }
 
 
-let app = express()
-
-const PORT = 8080
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
 	res.send({ mensaje: 'hola universo' })
@@ -28,7 +31,39 @@ app.get('/productoRandom', async (req, res) => {
    res.json(resultado)
 })
 
+router.get('/productos', async (req, res, next) => {
+   let resultado= await misProductos.getAll();
+   res.json(resultado)
+})
 
+router.get('/productos/:id', async (req, res) => {
+   console.log(req.params.id);
+   let resultado= await misProductos.getById(parseInt(req.params.id))
+   console.log(resultado);
+      res.json(resultado)
+})
+
+router.post('/productos', async (req, res, next) => {
+   console.log(req.body)
+   let resultado= await misProductos.save(req.body)
+
+   let resultado2= await misProductos.getAll();
+   res.json(resultado2)
+})
+
+router.put('/productos/:id', async (req, res, next) => {
+   await misProductos.deleteById(req.params.id);
+   await misProductos.save(req.body, req.params.id)
+   res.json({
+      result:'ok',
+      id: req.params.id,
+      new: req.body
+   })
+})
+
+
+
+app.use('/api', router)
 
 app.listen(PORT, () => {
    console.log(`Servidor http escuchando en http://localhost:${PORT}`)

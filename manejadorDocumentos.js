@@ -20,15 +20,15 @@ class Contenedor {
 	}
 	
 
-	async save(producto) {
+	async save(producto,id) {
 		try {
 		
 			let lectura=await this.leerProductos() ? await this.leerProductos() : []
 			let infoArray=lectura.length ? JSON.parse(lectura) : [];
-
+			this.contador=infoArray.length;
 			// let cantidad= infoArray.length
 			// producto.id=cantidad+1
-			producto.id=this.contador
+			producto.id= id ? id : this.contador+1
 			this.contador=this.contador+1
 			// console.log(`este es el contador: ${this.contador}`);
 			infoArray.push(producto)

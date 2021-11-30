@@ -1,22 +1,26 @@
 [
-{
-   "id":1,	
-   "name":"phone",
-   "price": 100,
-   "imagen": "https://imagen1.jpg"
-},
-
-{
-   "id":2,
-   "name":"tv",
-   "price": 200,
-   "imagen": "https://imagen2.jpg"
-},
-
-{
-   "id":3,
-   "name":"notebook",
-   "price": 300,
-   "imagen": "https://imagen3.jpg"
-}
+  {
+    "id": 1,
+    "name": "phone",
+    "price": 100,
+    "imagen": "https://imagen1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "tv",
+    "price": 200,
+    "imagen": "https://imagen2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "notebook",
+    "price": 300,
+    "imagen": "https://imagen3.jpg"
+  },
+  {
+    "name": "tableta",
+    "price": 404,
+    "imagen": "https://imagen4.jpg",
+    "id": "4"
+  }
 ]
