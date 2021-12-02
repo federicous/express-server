@@ -50,7 +50,7 @@ class Contenedor {
 			let lectura=await this.leerProductos() ? await this.leerProductos() : []
 			let infoArray=lectura.length ? JSON.parse(lectura) : [];
 			let aux= infoArray
-			let indice=aux.findIndex(product=>product.id===id)
+			let indice=aux.findIndex(product=>product.id===parseInt(id))
 			return infoArray[indice]
 
 
@@ -80,7 +80,7 @@ class Contenedor {
 			let lectura=await this.leerProductos() ? await this.leerProductos() : []
 			let infoArray=lectura.length ? JSON.parse(lectura) : [];
 			let aux= infoArray
-			let indice=aux.findIndex(product=>product.id===id)
+			let indice=aux.findIndex(product=>product.id===parseInt(id))
 			aux.splice(indice,1)
 			infoArray=[...aux]
 			console.log(infoArray);	

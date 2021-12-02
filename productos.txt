@@ -18,9 +18,9 @@
     "imagen": "https://imagen3.jpg"
   },
   {
-    "name": "tableta",
-    "price": 404,
+    "name": "tablet",
+    "price": 400,
     "imagen": "https://imagen4.jpg",
-    "id": "4"
+    "id": 4
   }
 ]

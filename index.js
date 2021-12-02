@@ -14,10 +14,22 @@ function getRandom(min, max) {
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static("./public"));
 
 app.get('/', (req, res) => {
-	res.send({ mensaje: 'hola universo' })
+	// res.send({ mensaje: 'hola universo' })
+   // res.send("index", {});
+   res.sendFile(__dirname + '/public/index.html');
      })
+
+app.post('/uploadproduct', function (req, res) {
+      // const rta= req.body
+      console.log(req);
+      // console.log(rta);
+      // res.send("ok")
+      
+   })
+   
 
 app.get('/productos', async (req, res) => {
    let resultado=await misProductos.getAll();
@@ -58,6 +70,15 @@ router.put('/productos/:id', async (req, res, next) => {
       result:'ok',
       id: req.params.id,
       new: req.body
+   })
+})
+
+router.delete('/productos/:id', async (req, res, next) => {
+   console.log(req.params.id);
+   await misProductos.deleteById(req.params.id);
+   res.json({
+      result:'ok',
+      id: req.params.id      
    })
 })
 
