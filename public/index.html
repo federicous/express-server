@@ -8,14 +8,56 @@
 </head>
 <body>
 	<h1>Ingresar producto</h1>
-	<form action="/uploadproduct" enctype="multipart/form-data" method="POST">
-		<input type="text" name="name" id="name">
-		<input type="text" name="price" id="price">
-		<input type="text" name="image" id="image">
+	<form action="http://localhost:8088/uploadproduct" enctype="multipart/form-data" method="POST" id="formProducts">
+		<label>name: <input type="text" name="name" id="name"><br></label>
+		<label>price: <input type="text" name="price" id="price"><br></label>
+		<label>image: <input type="text" name="image" id="image"><br></label>
 		<input type="submit" value="cargar producto">
 	</form>
 	<script>
-		
+		async function handleFormSubmit(event) {
+			event.preventDefault();
+			const form = event.currentTarget;
+			const url = form.action;
+
+			try {
+				const formData = new FormData(form);
+				const responseData = await postFormDataAsJson({ url, formData });
+				console.log({ responseData });
+
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		async function postFormDataAsJson({ url, formData }) {
+
+			const plainFormData = Object.fromEntries(formData.entries());
+			const formDataJsonString = JSON.stringify(plainFormData);
+
+			const fetchOptions = {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Accept": "application/json"
+				},
+				body: formDataJsonString,
+			};
+
+			const response = await fetch(url, fetchOptions);
+
+			if (!response.ok) {
+				const errorMessage = await response.text();
+				throw new Error(errorMessage);
+			}
+
+			return response.json();
+		}
+
+		const formProducts = document.getElementById("formProducts");
+		formProducts.addEventListener("submit", handleFormSubmit);
+
+
 	</script>
 </body>
 </html>

@@ -22,12 +22,19 @@ app.get('/', (req, res) => {
    res.sendFile(__dirname + '/public/index.html');
      })
 
-app.post('/uploadproduct', function (req, res) {
-      // const rta= req.body
-      console.log(req);
-      // console.log(rta);
-      // res.send("ok")
-      
+app.post('/uploadproduct', async function (req, res) {
+      console.log("post recibido");
+
+      const newProduct = {
+         name: req.body.name,
+         price: req.body.price,
+         image: req.body.image
+      };
+      console.log(newProduct);
+      res.status(201).json(newProduct)
+      await misProductos.save(newProduct)
+      await misProductos.getAll();
+
    })
    
 
