@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
       // res.send({ mensaje: 'hola universo' })
       // res.send("index", {});
       let total= await misProductos.getAll();
-      res.render('home',{productList: total, listExist: true});
+      res.render('home',{productList: total, listExist: total.length});
         })
 
 app.post('/uploadproduct', async function (req, res) {
