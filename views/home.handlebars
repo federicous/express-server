@@ -1,0 +1,16 @@
+<h1>Vista de Productos</h1>
+
+{{#if listExist}}
+	<div class="card-group">
+		{{#each productList}}
+		<div class="card">
+			<img src={{this.image}} class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">{{this.name}}</h5>
+				<p class="card-text">Price: {{this.price}}</p>
+				<p class="card-text"><small class="text-muted">Serial Number: {{this.id}}</small></p>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+{{/if}}

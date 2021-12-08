@@ -1,4 +1,4 @@
-let Contenedor=require('./public/manejadorDocumentos')
+let Contenedor=require('../public/manejadorDocumentos')
 let express = require('express')
 let app = express()
 const PORT = 8088
@@ -27,7 +27,7 @@ function getRandom(min, max) {
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static("./public"));
+// app.use(express.static("./public"));
 
 /* 
 app.get('/', (req, res) => {
@@ -37,11 +37,11 @@ app.get('/', (req, res) => {
      })
  */
 
-     app.get('/', (req, res) => {
+     app.get('/', async (req, res) => {
       // res.send({ mensaje: 'hola universo' })
       // res.send("index", {});
-      let data={name: 'tevelisor', price:'caro', image:'altafoto'}
-      res.render('hbs',data);
+      let total= await misProductos.getAll();
+      res.render('home',{productList: total, listExist: true});
         })
 
 app.post('/uploadproduct', async function (req, res) {
