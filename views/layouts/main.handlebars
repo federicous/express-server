@@ -11,23 +11,36 @@
 		crossorigin="anonymous">
 	<title>app</title>
 </head>
-
+<style>
+	.mainIcon {
+		width: 45px;
+		padding: 5px;
+	}
+</style>
 <body>
-	<div class="container">
-		<h1>Ingresar productos</h1>
-		<form action="http://localhost:8088/uploadproduct" enctype="multipart/form-data" method="POST"
-			id="formProducts">
-			<div class="mb-3 d-flex justify-content flex-column p-5 mx-5">
-				<label for="name" class="form-label">name:
-					<input type="text" name="name" id="name" class="form-control"><br></label>
-				<label for="price" class="form-label">price:
-					<input type="text" name="price" id="price" class="form-control"><br></label>
-				<label for="image" class="form-label">image:
-					<input type="text" name="image" id="image" class="form-control"><br></label>
-				<button type="submit" class="btn btn-primary">submit</button>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<svg class="mainIcon Iconflex-shrink-0 fill-current" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><title>Cube</title><path d="M440.9 136.3a4 4 0 000-6.91L288.16 40.65a64.14 64.14 0 00-64.33 0L71.12 129.39a4 4 0 000 6.91L254 243.88a4 4 0 004.06 0zM54 163.51a4 4 0 00-6 3.49v173.89a48 48 0 0023.84 41.39L234 479.51a4 4 0 006-3.46V274.3a4 4 0 00-2-3.46zM272 275v201a4 4 0 006 3.46l162.15-97.23A48 48 0 00464 340.89V167a4 4 0 00-6-3.45l-184 108a4 4 0 00-2 3.45z"></path></svg>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/productos">Ver productos</a>
+					</li>
+				</ul>
 			</div>
-		</form>
-
+		</div>
+	</nav>
+	<div class="container">
 		<span>
 			{{{body}}}
 		</span>

@@ -1,6 +1,6 @@
 <h1>Vista de Productos</h1>
 
-{{#if listExist}}
+{{!-- {{#if listExist}}
 	<div class="card-group">
 		{{#each productList}}
 		<div class="card">
@@ -15,5 +15,31 @@
 	</div>
 {{else}}
 <h2>No se encontraron productos</h2>
+{{/if}} --}}
 
+{{#if listExist}}
+	<table class="table table-dark table-hover">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col"></th>
+				<th scope="col">Name</th>
+				<th scope="col">Price</th>
+			</tr>
+		</thead>
+		<tbody>
+		{{#each productList}}
+			<tr>
+				<th scope="row">{{this.id}}</th>
+				<td>
+					<img class="img-thumbnail" style="height: 80px;" src={{this.image}} alt="">
+				</td>
+				<td>{{this.name}}</td>
+				<td>{{this.price}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+{{else}}
+<h2>No se encontraron productos</h2>
 {{/if}}

@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
       // res.send({ mensaje: 'hola universo' })
       // res.send("index", {});
       let total= await misProductos.getAll();
-      res.render('home',{productList: total, listExist: total.length});
+      res.render('products',{productList: total, listExist: total.length});
         })
 
 app.post('/uploadproduct', async function (req, res) {
@@ -61,8 +61,9 @@ app.post('/uploadproduct', async function (req, res) {
    
 
 app.get('/productos', async (req, res) => {
-   let resultado=await misProductos.getAll();
-   res.json(resultado)
+   let total=await misProductos.getAll();
+   // res.json(resultado)
+   res.render('home',{productList: total, listExist: total.length});
 })
 
 app.get('/productoRandom', async (req, res) => {
@@ -73,8 +74,9 @@ app.get('/productoRandom', async (req, res) => {
 })
 
 router.get('/productos', async (req, res, next) => {
-   let resultado= await misProductos.getAll();
-   res.json(resultado)
+   let total= await misProductos.getAll();
+   res.json(total)
+   // res.render('home',{productList: total, listExist: total.length});
 })
 
 router.get('/productos/:id', async (req, res) => {
@@ -88,8 +90,9 @@ router.post('/productos', async (req, res, next) => {
    console.log(req.body)
    let resultado= await misProductos.save(req.body)
 
-   let resultado2= await misProductos.getAll();
-   res.json(resultado2)
+   let total= await misProductos.getAll();
+   res.json(total)
+   // res.render('home',{productList: total, listExist: total.length});
 })
 
 router.put('/productos/:id', async (req, res, next) => {
