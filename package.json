@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "hbs": "nodemon ./views/hbs.js"
+    "hbs": "nodemon ./views/hbs.js",
+    "hbs2": "nodemon ./views/hbs/hbs2.js",
+    "pug": "nodemon ./views/pug/pug.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "pug": "^3.0.2"
   }
 }

@@ -1,0 +1,22 @@
+extends main.pug
+block productos
+	h1 Vista de productos
+	if listExist
+		table.table.table-dark.table-hover
+			thead
+				tr
+					th(scope='col') #
+					th(scope='col')
+					th(scope='col') Name
+					th(scope='col') Price
+			tbody
+				each item in productList
+					tr
+						th(scope='row')=item.id
+						td
+							img.img-thumbnail(style='height: 80px;' src=item.image alt='')
+						td=item.name
+						td=item.price
+	else 
+		h2 No se encontraron productos
+

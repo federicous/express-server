@@ -1,0 +1,18 @@
+extends main.pug
+block productos
+	h1 Ingresar productos
+	form#formProducts(action='http://localhost:8088/uploadproduct' enctype='multipart/form-data' method='POST')
+		.mb-3.d-flex.justify-content.flex-column.p-5.mx-5
+			label.form-label(for='name')
+				| name:
+				input#name.form-control(type='text' name='name')
+				br
+			label.form-label(for='price')
+				| price:
+				input#price.form-control(type='text' name='price')
+				br
+			label.form-label(for='image')
+				| image:
+				input#image.form-control(type='text' name='image')
+				br
+			button.btn.btn-primary(type='submit') submit
