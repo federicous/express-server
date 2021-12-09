@@ -9,7 +9,8 @@
     "start": "node index.js",
     "hbs": "nodemon ./views/hbs.js",
     "hbs2": "nodemon ./views/hbs/hbs2.js",
-    "pug": "nodemon ./views/pug/pug.js"
+    "pug": "nodemon ./views/pug/pug.js",
+    "ejs": "nodemon ./views/ejs/ejs.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-handlebars": "^6.0.2",
     "pug": "^3.0.2"
