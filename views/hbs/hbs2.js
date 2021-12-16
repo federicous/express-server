@@ -4,6 +4,7 @@ let app = express()
 const PORT = 8088
 const { Router } = express
 const router = Router()
+const {Server:SocketIO}= require('socket.io')
 
 // carga del modulo Handlebars
 const handlebars = require("express-handlebars")
