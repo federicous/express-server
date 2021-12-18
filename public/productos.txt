@@ -48,5 +48,15 @@
     "timestamp": 1639856289746,
     "uuid": "d9e41195-9224-4776-9744-7497db3cc9cf",
     "id": 5
+  },
+  {
+    "name": "camera",
+    "price": 99,
+    "stock": 9,
+    "description": "A description of the product",
+    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg",
+    "timestamp": 1639860180616,
+    "uuid": "c39bc701-0b25-4987-bf0b-0f542eae5297",
+    "id": 6
   }
 ]

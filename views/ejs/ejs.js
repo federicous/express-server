@@ -15,6 +15,21 @@ app.set("view engine", "ejs");
 let misProductos = new Contenedor('./public/productos.txt')
 let misCarritos = new Contenedor('./public/carritos.txt')
 
+
+let acceso = {
+   isAdmin : function (req, res, next) {
+      // console.log(JSON.stringify(req.headers));
+      // return next();
+         if (req.headers.admin=="true") {
+            return next();
+         }else{
+            res.json({ error : -1, descripcion: "ruta 'x' método 'y' no autorizada" })
+            res.redirect('/');
+         }
+      
+   }
+};
+
 function getRandom(min, max) {
    return Math.floor(Math.random() * (max - min)) + min;
  }
@@ -61,7 +76,7 @@ app.get('/productoRandom', async (req, res) => {
 
 /* ############################## Product ###################################### */
 // ----------- GET ---------------
-routerProd.get('/', async (req, res, next) => {
+routerProd.get('/', acceso.isAdmin, async (req, res, next) => {
    let total= await misProductos.getAll();
    res.json(total)
 })
@@ -73,7 +88,7 @@ routerProd.get('/:id', async (req, res) => {
       res.json(resultado)
 })
 // ----------- POST ---------------
-routerProd.post('/', async (req, res, next) => {
+routerProd.post('/', acceso.isAdmin, async (req, res, next) => {
    console.log(req.body)
    let resultado= await misProductos.save(req.body)
 
@@ -117,7 +132,10 @@ routerCart.get('/:id', async (req, res) => {
 // ----------- POST ---------------
 routerCart.post('/', async (req, res, next) => {
    console.log(req.body)
-   let resultado= await misCarritos.save(req.body)
+   let cartToSave= {
+      cartList: req.body
+   }
+   let resultado= await misCarritos.save(cartToSave)
 
    let total= await misCarritos.getAll();
    res.json({id: total[total.length - 1].id})
