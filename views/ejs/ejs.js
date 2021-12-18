@@ -123,6 +123,18 @@ routerCart.post('/', async (req, res, next) => {
    res.json({id: total[total.length - 1].id})
    console.log(`Id del pedido: ${total[total.length - 1].id}`);
 })
+// ----------- POST Producto---------------
+routerCart.post('/:id/product', async (req, res, next) => {
+   let cart= await misCarritos.getById(parseInt(req.params.id))
+
+
+   console.log(req.body)
+   let resultado= await misCarritos.save(req.body)
+
+   let total= await misCarritos.getAll();
+   res.json({id: total[total.length - 1].id})
+   console.log(`Id del pedido: ${total[total.length - 1].id}`);
+})
 // ----------- PUT ---------------
 routerCart.put('/:id', async (req, res, next) => {
    await misCarritos.deleteById(req.params.id);

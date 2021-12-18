@@ -1,32 +1,52 @@
 [
   {
-    "id": 0,
     "name": "phone",
     "price": 99,
-    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
+    "stock": 9,
+    "description": "A description of the product",
+    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg",
+    "timestamp": 1639856174792,
+    "uuid": "34cb02b8-5a47-4f7a-b5b9-f33c4b34cbbb",
+    "id": 1
   },
   {
-    "id": 1,
     "name": "tv",
     "price": 199,
-    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
+    "stock": 9,
+    "description": "A description of the product",
+    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg",
+    "timestamp": 1639856195600,
+    "uuid": "2372ce09-1af3-455b-972a-984febfcfa4c",
+    "id": 2
   },
   {
-    "id": 2,
     "name": "notebook",
     "price": 299,
-    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
+    "stock": 9,
+    "description": "A description of the product",
+    "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg",
+    "timestamp": 1639856220302,
+    "uuid": "8dbd6fdc-32e8-4788-bbf3-180508807e5b",
+    "id": 3
   },
   {
     "name": "tablet",
     "price": 399,
+    "stock": 9,
+    "description": "A description of the product",
     "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
-    "id": 3
+    "timestamp": 1639856253881,
+    "uuid": "f1d023a7-e8a5-446c-b7cf-af5ef4948cc9",
+    "id": 4
   },
   {
     "name": "macbook",
     "price": 999,
+    "stock": 9,
+    "description": "A description of the product",
     "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg",
+    "timestamp": 1639856289746,
+    "uuid": "d9e41195-9224-4776-9744-7497db3cc9cf",
     "id": 5
   }
 ]

@@ -6,23 +6,27 @@
         "id": 0,
         "name": "phone",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 1,
         "name": "tv",
         "price": 199,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
       },
       {
         "id": 2,
         "name": "notebook",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "tablet",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }
@@ -35,23 +39,27 @@
         "id": 0,
         "name": "microprocesador",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 1,
         "name": "memoria",
         "price": 199,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
       },
       {
         "id": 2,
         "name": "motherboard",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "gabinete",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }
@@ -63,23 +71,27 @@
         "id": 0,
         "name": "phone",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 1,
         "name": "tv",
         "price": 199,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
       },
       {
         "id": 2,
         "name": "notebook",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "tablet",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }
@@ -92,23 +104,27 @@
         "id": 0,
         "name": "manzana",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 1,
         "name": "uva",
         "price": 199,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
       },
       {
         "id": 2,
         "name": "naranja",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "frutilla",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }
@@ -121,17 +137,20 @@
         "id": 0,
         "name": "milanesas",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 2,
         "name": "lechuga",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "tomates",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }
@@ -144,23 +163,27 @@
         "id": 0,
         "name": "aspirina",
         "price": 99,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6009/6009679_sd.jpg"
       },
       {
         "id": 1,
         "name": "ibuprofeno",
         "price": 199,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/6202/6202106_sd.jpg"
       },
       {
         "id": 2,
         "name": "paracetamol",
         "price": 299,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/5581/5581204_sd.jpg"
       },
       {
         "name": "diclofenac",
         "price": 399,
+        "stock": 9,
         "image": "https://pisces.bbystatic.com/prescaled/499/500/image2/BestBuy_US/images/products/3814/3814001_sd.jpg",
         "id": 3
       }

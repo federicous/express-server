@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { uuid } = require('uuidv4');
 
 class Contenedor {
 
@@ -28,6 +29,8 @@ class Contenedor {
 			this.contador=infoArray.length;
 			// let cantidad= infoArray.length
 			// producto.id=cantidad+1
+			producto.timestamp= Date.now();
+			producto.uuid=uuid()
 			producto.id= id ? id : this.contador+1
 			this.contador=this.contador+1
 			// console.log(`este es el contador: ${this.contador}`);
